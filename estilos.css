@@ -1,0 +1,443 @@
+
+/*===========================================================================
+=            Prototipo de la antartida de Frozen 24 de Mayo 2019            =
+===========================================================================*/
+
+/* Fondo Azul */
+body {
+background: rgb(2, 2, 99);
+}
+
+/* Imagen de Estrellas */
+.fondo-img {
+position: absolute;
+z-index: -1;
+}
+
+/* Imagen Neblina */
+.frente-img {
+position: absolute;
+z-index: 10;
+width: 100vw;
+opacity: .5;
+}
+
+/* Luna */
+#luna {
+width: 100px;
+height: 100px;
+background: white;
+border-radius: 50%;
+margin: 20px 10px 10px 60px;
+position: absolute;
+box-shadow: inset 6px 1px 14px 6px grey;
+}
+
+#luna::before {
+width: 30px;
+height: 30px;
+background: #f3f3674a;
+border-radius: 50%;
+position: absolute;
+z-index: 3;
+content: "";
+box-shadow: 5px 7px 66px 64px lightgoldenrodyellow;
+margin: 37px 0px 0px 33px;
+}
+
+
+/* Piramides */
+.piramides {
+width: 0px;
+height: 0px;
+border-left: 100px solid transparent;
+border-right: 100px solid transparent;
+border-bottom: 505px solid rgb(25, 149, 221);
+}
+
+.piramide-izq {
+margin: 140px 10px 10px 100px; 
+position: absolute;
+}
+
+.piramide-der {
+margin: 140px 10px 10px 1050px;
+position: absolute;
+}
+
+
+/* Torres */
+.torres {
+width: 200px;
+height: 333px;
+border: 1px solid rgb(72, 115, 207);
+background: rgb(25, 149, 221);
+position: absolute;
+box-shadow: 6px 0px 18px 6px rgb(2, 2, 138);
+}
+
+.torre-izq {
+margin: 310px 10px 10px 295px; 
+}
+    
+.torre-der {
+margin: 310px 0px 0px 855px;
+}
+
+.torre-izq > div:nth-child(1) {
+width: 30px;
+height: 25px;
+background: rgb(25, 149, 221);
+margin-top: -25px;
+box-shadow: 6px 0px 18px 6px rgb(2, 2, 138);
+}
+
+.torre-izq > div:nth-child(2) {
+width: 30px;
+height: 25px;
+background: rgb(25, 149, 221);
+margin: -25px 10px 10px 43px;
+position: absolute;
+box-shadow: 6px 0px 18px 6px rgb(2, 2, 138);
+}
+
+.torre-izq > div:nth-child(3) {
+width: 30px;
+height: 25px;
+background: rgb(25, 149, 221);
+margin: -25px 15px 15px 85px;
+position: absolute;
+box-shadow: 6px 0px 18px 6px rgb(2, 2, 138);
+}
+
+.torre-izq > div:nth-child(4) {
+width: 30px;
+height: 25px;
+background: rgb(25, 149, 221);
+margin: -25px 25px 25px 128px;
+position: absolute;
+box-shadow: 6px 0px 18px 6px rgb(2, 2, 138);
+}
+
+.torre-izq > div:nth-child(5) {
+width: 30px;
+height: 25px;
+background: rgb(25, 149, 221);
+margin: -25px 30px 30px 169px;
+position: absolute;
+box-shadow: 6px 0px 18px 6px rgb(2, 2, 138);
+}
+
+/* Puntas Torre Derecha */
+.torre-der > div:nth-child(1) {
+width: 30px;
+height: 25px;
+background: rgb(25, 149, 221);
+margin-top: -25px;
+box-shadow: 6px 0px 18px 6px rgb(2, 2, 138);
+}
+
+.torre-der > div:nth-child(2) {
+width: 30px;
+height: 25px;
+background: rgb(25, 149, 221);
+margin: -25px 10px 10px 41px;
+position: absolute;
+box-shadow: 6px 0px 18px 6px rgb(2, 2, 138);
+}
+
+.torre-der > div:nth-child(3) {
+width: 30px;
+height: 25px;
+background: rgb(25, 149, 221);
+margin: -25px 15px 15px 84px;
+position: absolute;
+box-shadow: 6px 0px 18px 6px rgb(2, 2, 138);
+}
+
+.torre-der > div:nth-child(4) {
+width: 30px;
+height: 25px;
+background: rgb(25, 149, 221);
+margin: -25px 25px 25px 127px;
+position: absolute;
+box-shadow: 6px 0px 18px 6px rgb(2, 2, 138);
+}
+
+.torre-der > div:nth-child(5) {
+width: 30px;
+height: 25px;
+background: rgb(25, 149, 221);
+margin: -25px 30px 30px 170px;
+position: absolute;
+box-shadow: 6px 0px 18px 6px rgb(2, 2, 138);
+}
+
+
+/* Ventanas */
+.ventanas {
+width: 125px;
+height: 80px;
+border-radius: 50%;
+background: white;
+border: groove;
+position: absolute;
+margin: 50px 0px 0px 36px;
+z-index: 2;
+}
+
+.ventanas::before {
+width: 30px;
+height: 30px;
+background: #f3f3677d;
+border-radius: 50%;
+position: absolute;
+z-index: 3;
+content: "";
+box-shadow: 5px 7px 66px 64px lightgoldenrodyellow;
+margin: 22px -10px 0px 40px;
+}
+
+/* Rombo Centro */
+#rombo-centro {
+width: 0px;
+height: 0px;
+border-left: 195px solid transparent;
+border-right: 208px solid transparent;
+border-bottom: 235px solid rgb(25, 149, 221);
+margin: 0px 0px 0px 474px;
+position: absolute;
+}
+
+#rombo-centro::before {
+content: "";
+width: 220px;
+height: 0px;
+border-left: 100px solid transparent;
+border-right: 100px solid transparent;
+border-top: 408px solid rgb(25, 149, 221);
+position: absolute;
+margin: 237px 0px 0px -204px;
+}
+
+/* Ventana Rombo */
+#ventana-rombo {
+width: 80px;
+height: 80px;
+border: groove;
+background: rgba(255, 255, 255, 0.658);
+transform: scaleX(.7) rotate(45deg);
+margin: 60px -43px;
+}
+
+.ventana-rombo::after {
+width: 30px;
+height: 30px;
+background: #f3f3677d;
+border-radius: 50%;
+position: absolute;
+z-index: 3;
+content: "";
+box-shadow: 5px 7px 66px 64px lightgoldenrodyellow;
+margin: 22px -10px 0px 40px;
+    }
+
+
+/* Balcon */
+#balcon {
+width: 416px;
+height: 92px;
+border: 1px solid #4590b5;
+background: #53b3e2;
+border-radius: 0px 0px 100px 100px;
+z-index: 1;
+position: absolute;
+margin: 29px 10px 10px -203px;
+}
+
+#balcon > div {
+width: 34px;
+height: 17px;
+background: #53b3e2;
+border: 8px solid #1995dd;
+position: absolute;
+box-shadow: 6px 0px 19px 5px rgb(2, 2, 138);
+}
+
+#balcon > :nth-child(1) {
+transform: skew(5deg,42deg);
+margin: 21px 0px 0px 3px;
+}
+
+#balcon > :nth-child(2) {
+transform: skew(0deg,9deg);
+margin: 51px 0px 0px 60px;
+}
+
+#balcon > :nth-child(3) {
+transform: skew(0deg,3deg);
+margin: 56px 0px 0px 117px;
+}
+
+#balcon > :nth-child(4) {
+    transform: skew(0deg,-2deg);
+    margin: 56px 0px 0px 244px;
+}
+
+#balcon > :nth-child(5) {
+    transform: skew(0deg,-4deg);
+    margin: 53px 0px 0px 302px;
+}
+
+#balcon > :nth-child(6) {
+    transform: skew(0deg,-45deg);
+    margin: 24px 0px 0px 359px;
+}
+
+/* Puerta */
+#puerta {
+width: 200px;
+height: 299px;
+background: rgb(2, 2, 99);
+position: absolute;
+margin: 140px 10px 10px -92px;
+border-radius: 100px 100px 0px 0px;
+}
+
+/* Escalera */
+#escalera > div {
+    background: #04abff3a;
+    border: 5px solid #04acff;
+    position: absolute;
+    z-index: 2;
+    transform: skew(0deg,-0deg);
+    box-shadow: 3px 0px 58px -3px rgb(2, 2, 138);
+}
+
+#escalera > :nth-child(1) {
+    width: 66px;
+    height: 7px;
+    margin: 120px 10px 10px -34px;
+}
+
+#escalera > :nth-child(2) {
+    width: 76px;
+    height: 9px;
+    margin: 134px 10px 10px -39px;
+}
+
+#escalera > :nth-child(3) {
+    width: 86px;
+    height: 13px;
+    margin: 148px 10px 10px -44px;
+}
+
+#escalera > :nth-child(4) {
+    width: 104px;
+    height: 17px;
+    margin: 166px 10px 10px -52px;
+}
+
+#escalera > :nth-child(5) {
+    width: 128px;
+    height: 17px;
+    margin: 188px 10px 10px -64px;
+}
+
+#escalera > :nth-child(6) {
+    width: 158px;
+    height: 17px;
+    margin: 210px 10px 10px -80px;
+}
+
+#escalera > :nth-child(7) {
+    width: 186px;
+    height: 17px;
+    margin: 232px 10px 10px -94px;
+}
+
+#escalera > :nth-child(8) {
+    width: 213px;
+    height: 17px;
+    margin: 254px 10px 10px -107px;
+}
+
+#escalera > :nth-child(9) {
+    width: 229px;
+    height: 17px;
+    margin: 276px 10px 10px -115px;
+}
+
+#escalera > :nth-child(10) {
+    width: 245px;
+    height: 19px;
+    margin: 298px 10px 10px -123px;
+}
+
+#escalera > :nth-child(11) {
+    width: 258px;
+    height: 19px;
+    margin: 320px 10px 10px -129px;
+}
+
+#escalera > :nth-child(12) {
+    width: 272px;
+    height: 21px;
+    margin: 342px 10px 10px -136px;
+}
+
+#escalera > :nth-child(13) {
+    width: 283px;
+    height: 21px;
+    margin: 366px 10px 10px -141px;
+}
+
+#escalera > :nth-child(14) {
+    width: 306px;
+    height: 23px;
+    margin: 391px 10px 10px -152px;
+}
+
+#escalera > :nth-child(15) {
+    width: 336px;
+    height: 25px;
+    margin: 418px 10px 10px -166px;
+}
+
+/* Baranda Izquierda Escalera */
+#baranda-escaleras-izq {
+    width: 17px;
+    height: 188px;
+    background: #1995ddb8;
+    border: 8px solid #1995dd;
+    position: absolute;
+    transform: skew(154deg,-74deg);
+    margin: 169px 0px 0px -117px;
+    z-index: 3;
+}
+
+/* Baranda Derecha Escalera */
+#baranda-escaleras-der {
+    width: 14px;
+    height: 200px;
+    background: #1995ddb8;
+    border: 8px solid #1995dd;
+    position: absolute;
+    transform: skew(27deg,74deg);
+    margin: 167px 0px 0px 97px;
+    z-index: 3;
+}
+
+/* Piso */
+#piso {
+    width: 100%;
+    height: 106px;
+    background: #a1e7f7e6;
+    margin-top: 645px;
+    position: absolute;
+    padding: flex;
+}
+
+
+/*===== End of Prototipo de la antartida de Frozen 29 de Mayo 2019 = Hellen Merchán =====*/
+
